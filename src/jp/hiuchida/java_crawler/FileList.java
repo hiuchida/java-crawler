@@ -16,6 +16,8 @@ public class FileList {
             	log.trace("F " + f);
                 if (f.getName().endsWith(".java")) {
                 	ParseJava.execute(f.getPath(), f.getName());
+                } else if (f.getName().endsWith(".jar")) {
+                	ParseJar.execute(f.getPath(), f.getName());
                 }
             }
         }

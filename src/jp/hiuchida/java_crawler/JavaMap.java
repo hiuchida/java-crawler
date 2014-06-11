@@ -1,6 +1,7 @@
 package jp.hiuchida.java_crawler;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -33,5 +34,15 @@ public class JavaMap {
 			importMap.put(s, importMap.get(s) + 1);
 		}
 	}
+	public static StringArray getImportArray() {
+		StringArray sa = new StringArray(importMap.keySet());
+		Collections.sort(sa);
+		return sa;
+	}
 	public static HashSet<String> fqcnSet = new HashSet<>();
+	public static StringArray getFqcnArray() {
+		StringArray sa = new StringArray(fqcnSet);
+		Collections.sort(sa);
+		return sa;
+	}
 }
